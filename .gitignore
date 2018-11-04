@@ -1,0 +1,8 @@
+node_modules
+docs
+dist
+**/*.bak
+yarn.lock
+app.json
+now.json
+

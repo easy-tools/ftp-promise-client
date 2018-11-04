@@ -1,0 +1,23 @@
+{
+  "name": "ftp-promise",
+  "version": "1.0.0",
+  "description": "just using node-ftp but with promise",
+  "main": "lib/index.js",
+  "repository": "https://github.com/easy-tools/ftp-promise.git",
+  "author": "liuwill <liuwei_will@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint ./",
+    "test": "NODE_ENV=unit mocha --opts test/mocha.opts",
+    "coverage": "export NODE_ENV=unit && nyc mocha --opts test/mocha.opts"
+  },
+  "dependencies": {
+    "ftp": "^0.3.10"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.8.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
+  }
+}
