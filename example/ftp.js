@@ -13,4 +13,5 @@ let appConfig = require(rawPath)
 var ftpClient = FtpClientPromise.Factory(appConfig.ftp)
 ftpClient.list().then(function (result) {
   console.log(result.response)
+  ftpClient.close()
 })

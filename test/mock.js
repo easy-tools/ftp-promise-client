@@ -6,6 +6,7 @@ class MockClient extends EventEmitter {
     this.handlers = {}
     this.init()
     this.isReady = false
+    this.isEnd = false
     this.autoConnect = autoConnect || false
   }
 
@@ -36,6 +37,10 @@ class MockClient extends EventEmitter {
     }
   }
 
+  end() {
+    this.isEnd = true
+  }
+
   put(source, target, callback) {
     console.log('start put')
     this.handlers = {
@@ -50,10 +55,10 @@ class MockClient extends EventEmitter {
       return
     }
 
-    if (source !== 'error') {
-      this.emit('put')
-    } else {
+    if (source === 'error' || this.isEnd) {
       this.emit('error')
+    } else {
+      this.emit('put')
     }
   }
 }

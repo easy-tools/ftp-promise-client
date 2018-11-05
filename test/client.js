@@ -42,4 +42,12 @@ describe('should ftp works', function () {
       done()
     })
   })
+
+  it('should error after close', function (done) {
+    ftpClientAuto.close()
+    ftpClientAuto.put('source', 'target', function(err) {
+      expect(err.message).to.be.equal('fail')
+      done()
+    })
+  })
 })

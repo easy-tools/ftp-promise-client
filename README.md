@@ -5,9 +5,11 @@
 
 > still developing, promise ftp client base on ftp
 
-## How To Use
+## Installation
 
-`yarn add ftp-promise-client`
+`$ yarn add ftp-promise-client`
+
+## How To Use
 
 ```javascript
 var fs = require('fs')
@@ -25,6 +27,7 @@ let appConfig = require(rawPath)
 var ftpClient = FtpClientPromise.Factory(appConfig.ftp)
 ftpClient.list().then(function (result) {
   console.log(result.response)
+  ftpClient.close()
 })
 ```
 
