@@ -1,9 +1,9 @@
 {
-  "name": "ftp-promise",
-  "version": "1.0.0",
+  "name": "ftp-promise-client",
+  "version": "0.1.0",
   "description": "just using node-ftp but with promise",
   "main": "lib/index.js",
-  "repository": "https://github.com/easy-tools/ftp-promise.git",
+  "repository": "https://github.com/easy-tools/ftp-promise-client.git",
   "author": "liuwill <liuwei_will@qq.com>",
   "license": "MIT",
   "scripts": {
