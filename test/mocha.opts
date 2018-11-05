@@ -1,0 +1,6 @@
+--silly
+--full-trace
+--timeout 10000
+--recursive
+--exit
+test/
