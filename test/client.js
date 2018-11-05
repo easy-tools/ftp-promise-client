@@ -14,8 +14,8 @@ var ftpClientAuto = new FtpClientPromise({}, autoMockClient)
 describe('should ftp works', function () {
   it('should put callback', function (done) {
     var source = Date.now()
-    ftpClient.put(source, 'target').then(function(args) {
-      expect(source).to.be.equal(args[0])
+    ftpClient.put(source, 'target').then(function(result) {
+      expect(source).to.be.equal(result.request[0])
       done()
     })
     mockClient.emit('ready')
@@ -23,8 +23,8 @@ describe('should ftp works', function () {
 
   it('should put callback auto', function (done) {
     var source = Math.random()
-    ftpClientAuto.put(source, 'target', function(err, args) {
-      expect(source).to.be.equal(args[0])
+    ftpClientAuto.put(source, 'target', function(err, result) {
+      expect(source).to.be.equal(result.request[0])
       done()
     })
   })
