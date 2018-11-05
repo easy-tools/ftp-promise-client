@@ -9,7 +9,9 @@
   "scripts": {
     "lint": "eslint ./",
     "test": "NODE_ENV=unit mocha --opts test/mocha.opts",
-    "coverage": "export NODE_ENV=unit && nyc mocha --opts test/mocha.opts"
+    "coverage": "export NODE_ENV=unit && nyc mocha --opts test/mocha.opts",
+    "report": "export NODE_ENV=unit && nyc --reporter=html --reporter=text mocha --opts test/mocha.opts",
+    "report-coverage": "export NODE_ENV=unit && nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
     "ftp": "^0.3.10"
