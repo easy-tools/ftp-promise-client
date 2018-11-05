@@ -1,0 +1,8 @@
+{
+  "ftp": {
+    "host": "localhost",
+    "port": "21",
+    "user": "user",
+    "password": "pass"
+  }
+}
